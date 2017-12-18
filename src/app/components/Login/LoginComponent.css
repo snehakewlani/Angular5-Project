@@ -1,0 +1,36 @@
+.col-md-6{
+    border: 1px solid white;
+	padding-left: 10px
+ 
+}
+.col-md-3{
+    border: 1px solid white;   
+}
+.message{color:#FF0000;
+font-size: small;
+font-weight: bold; 
+white-space: pre;
+}
+
+#mainDivision{
+	width: 100%
+}
+
+
+.LoginPanel input{
+    height: 45px;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.LoginPanel input:hover,
+.LoginPanel input:focus {
+	outline:none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: #ccc;
+
+}

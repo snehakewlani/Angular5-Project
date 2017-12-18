@@ -1,0 +1,23 @@
+#myNavbar{
+	height: 65px;
+	padding-left: 1px;
+	background-color:#040438;
+}
+
+#footer1{
+	height: 65px;
+	padding-left: 1px;
+	background-color:#040438;
+	color: white;
+}
+
+#amazon{
+	padding-left: 2px;
+	padding-top: 30px; 
+	padding-right: 30px;
+	font-size: 25px; 
+	color:white;
+	text-decoration: bolder;
+	font-family: Georgia, serif;
+}
+
