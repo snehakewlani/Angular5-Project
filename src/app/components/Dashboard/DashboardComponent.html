@@ -1,51 +1,67 @@
-<div>Default pagination</div>
-<ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
-
-<hr>
-
-<pre>Current page: {{page}}</pre>
-
 <div>
     <div class="container">
         <div class="text-center">
-            <h1>Amazon Daily Deals</h1>
+            <h3>Amazon Daily Deals</h3>
 
             <!-- items being paged -->
-            <div *ngFor="let item of pagedItems">{{item.name}}</div>
+            <div>
+                <div *ngFor="let item of pagedItems">
+                    <div class="col-sm-3">
+                        <div class="thumbnail" style="height: 450px;">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a href="#"> <img class='img-responsive' src={{item.imgSrc}} alt={{item.name}}>
+                                </a></div>
+
+                                <div class="col-sm-12 text-center" style="position: absolute;bottom: 50px;">
+                                    <h4><a href="#">{{item.name}}</a></h4>
+                                </div>
+
+                                <div class="col-sm-12 text-center" style="position: absolute;bottom: 30px;">
+                                    <b>{{item.price | currency: "Rs. "}}</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+                        <li [ngClass]="{disabled:pager.currentPage === 1}">
+                            <a (click)="setPage(1)">First</a>
+                        </li>
+                        <li [ngClass]="{disabled:pager.currentPage === 1}">
+                            <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+                        </li>
+                        <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+                            <a (click)="setPage(page)">{{page}}</a>
+                        </li>
+                        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                            <a (click)="setPage(pager.currentPage + 1)">Next</a>
+                        </li>
+                        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                            <a (click)="setPage(pager.totalPages)">Last</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
             <!-- pager -->
-            <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
-                <li [ngClass]="{disabled:pager.currentPage === 1}">
-                    <a (click)="setPage(1)">First</a>
-                </li>
-                <li [ngClass]="{disabled:pager.currentPage === 1}">
-                    <a (click)="setPage(pager.currentPage - 1)">Previous</a>
-                </li>
-                <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
-                    <a (click)="setPage(page)">{{page}}</a>
-                </li>
-                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                    <a (click)="setPage(pager.currentPage + 1)">Next</a>
-                </li>
-                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                    <a (click)="setPage(pager.totalPages)">Last</a>
-                </li>
-            </ul>
         </div>
     </div>
 </div>
 
 <!--ul style="list-style-type:none">
-  <li *ngFor="let product of products"> 
-    
+<li *ngFor="let product of products"> 
 
-    <div class="col-sm-3">
-      <div class="thumbnail">
-          <a href="#" class="sliderImg">
-              <img src={{product.imgSrc}} alt={{product.name}} width="78%"><br> 
-              <p>{{product.name}}</p></a>
-          <b>{{product.price}}</b><br>
-      </div>
-  </div>
-  </li>
- </ul-->
+
+<div class="col-sm-3">
+<div class="thumbnail">
+    <a href="#" class="sliderImg">
+        <img src={{product.imgSrc}} alt={{product.name}} width="78%"><br> 
+        <p>{{product.name}}</p></a>
+    <b>{{product.price}}</b><br>
+</div>
+</div>
+</li>
+</ul-->

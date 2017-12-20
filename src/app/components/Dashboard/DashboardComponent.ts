@@ -30,8 +30,8 @@ export class DashboardComponent {
         },
         {
             "id": 102,
-            "name": "Rayban Eyewear",
-            "imgSrc": "../../../assets/images/eyeWear.jpg",
+            "name": "IDEE Eyewear",
+            "imgSrc": "../../../assets/images/sunglass.jpg",
             "price": 4000
         },
         {
@@ -54,22 +54,47 @@ export class DashboardComponent {
         },
         {
             "id": 106,
-            "name": "Gradening Tools",
-            "imgSrc": "../../../assets/images/garden.jpg",
-            "price": 230
+            "name": "Plants Stand",
+            "imgSrc": "../../../assets/images/standPlant.jpg",
+            "price": 2600
         },
         {
             "id": 107,
-            "name": "Couch",
-            "imgSrc": "../../../assets/images/couch6.jpg",
+            "name": "Sofa Set",
+            "imgSrc": "../../../assets/images/couch5.jpg",
             "price": 21090
         },
         {
             "id": 108,
-            "name": "Honda Civic",
-            "imgSrc": "../../../assets/images/car.jpg",
-            "price": 800000
-        }
+            "name": "American Tourister Travel Bag set",
+            "imgSrc": "../../../assets/images/travelGear.jpg",
+            "price": 15000
+        },
+        {
+            "id": 109,
+            "name": "Women's Hoodie",
+            "imgSrc": "../../../assets/images/hoodie.jfif",
+            "price": 2109
+        },
+        {
+            "id": 110,
+            "name": "Recliner",
+            "imgSrc": "../../../assets/images/recliner.jpeg",
+            "price": 52000
+        },
+        {
+            "id": 111,
+            "name": "Giordano Watch",
+            "imgSrc": "../../../assets/images/watch.jpg",
+            "price": 2109
+        },
+        {
+            "id": 112,
+            "name": "Lounger",
+            "imgSrc": "../../../assets/images/couch8.jpg",
+            "price": 48000
+        },
+
 
     ];
 
