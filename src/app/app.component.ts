@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import * as _ from 'underscore';
+ 
+//import { pagerService } from './services/pagerService';
 
 @Component({
   selector: 'app-root',
